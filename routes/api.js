@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
-
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 
@@ -22,11 +20,12 @@ mongodb.MongoClient.connect("mongodb://tester:testpass@ds133331.mlab.com:33331/h
   console.log("Database connection ready");
 });
 
-
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
+
+
 
 /*  "/regulations"
  *    GET: finds all regulations
@@ -93,6 +92,5 @@ router.get("/regulations/:id", function(req, res) {
   // error handlers
 
 module.exports = router;
-
 
 

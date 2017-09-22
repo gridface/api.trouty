@@ -9,7 +9,7 @@
 //var app = require('../app');
 
 var app = require('../app');
-var service = require('../server')
+//var service = require('../server')
 var debug = require('debug')('GridfaceHome:server');
 var http = require('http');
 
