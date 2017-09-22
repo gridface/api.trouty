@@ -1,0 +1,109 @@
+extends layout
+
+block content
+  // use "theme-invert" class on bright backgrounds, also try "text-shadows" class
+  body.theme-invert
+    nav.mainmenu
+      .container
+        .dropdown
+          button.navbar-toggle(type='button', data-toggle='dropdown')
+            span.icon-bar
+            |  
+            span.icon-bar
+            |  
+            span.icon-bar
+          // <a data-toggle="dropdown" href="#">Dropdown trigger</a>
+          ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
+            li
+              a.active(href='#head') Hello
+            li
+              a(href='#about') About me      
+            li
+              a(href='#themes') Services       
+            li
+              a(href='#contact') Get in touch
+    // Main (Home) section
+    section#head.section
+      .container
+        .row
+          .col-md-10.col-lg-10.col-md-offset-1.col-lg-offset-1.text-center
+            // Site Title, your name, HELLO msg, etc.
+            h1.title Gridface Solutions
+            h2.subtitle Automation and Mobile Apps For Your Small Business
+            // Short introductory (optional)
+            h3.tagline
+              |We bring the next generation of productivity and accessibility to
+              br
+              |your business through leading edge bot, cloud, and database solutions.
+            // Nice place to describe your site in a sentence or two
+            //p
+             // a.btn.btn-default.btn-lg(href='/download/') Download template now
+          // /col
+        // /row
+    // Second (About) section
+    section#about.section
+      .container
+        h2.text-center.title About me
+        .row
+          .col-sm-4.col-sm-offset-2
+            h5
+              strong
+                | Time Tested
+                br
+            p
+              |My name is Anton Cagle and I have been a solution developer, designer, and architect for several top companies, from start-ups to Fortune 100.
+          .col-sm-4
+            h5
+              strong
+                | Proven Solutions
+                br
+            |     
+            p
+              |I specialize in automation and API development.  From front office automation to database integration, I help businesses use technology to solve repetitive tasks, allowing you to focus on what is really important - your product and your customers.      
+            h5
+              strong
+                | Author links
+                br
+            |     
+            p
+              |  / 
+              a(href='http://linkedin.com/in/anton-cagle') LinkedIn
+              |  / 
+              a(href='https://www.upwork.com/o/profiles/users/_~0180a2912b2b79a267/') Upwork
+    // Third (Works) section
+    section#themes.section
+      .container
+        h2.text-center.title Our Services
+        p.lead.text-center
+          | We build a variety of custom solutions
+          br
+          |for your small business automation needs
+
+    section#contact.section
+      .container
+        h2.text-center.title Get in touch
+        .row
+          .col-sm-8.col-sm-offset-2.text-center
+            p Interested in an automation solution for your business?
+            p We would love to talk to you!
+            p
+              b tonycagle1 [at] gmail dot com
+              br
+              br
+            ul.list-inline.list-social
+              li
+
+              li
+                a.btn.btn-link(href='https://github.com/gridface')
+                  i.fa.fa-github.fa-fw
+                  |  Github
+              li
+                a.btn.btn-link(href='http://linkedin.com/in/anton-cagle')
+                  i.fa.fa-linkedin.fa-fw
+                  |  LinkedIn
+    // Load js libs only when the page is loaded.
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
+    script(src='js/modernizr.custom.72241.js')
+    // Custom template scripts
+    script(src='js/magister.js')
