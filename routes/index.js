@@ -58,7 +58,7 @@ router.get("/regulations/:id", function(req, res) {
     });
   });
   
-  router.get("/regulations/landmarkType", function(req, res) {
+  router.get("/regulations/:landmarkType", function(req, res) {
       db.collection(REGULATIONS_COLLECTION).findOne({ _id: new ObjectID(req.params.landmarkType) }, function(err, doc) {
         if (err) {
           handleError(res, err.message, "Failed to get regulation");
