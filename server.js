@@ -7,17 +7,8 @@ var ObjectID = mongodb.ObjectID;
 var REGULATIONS_COLLECTION = "regulation";
 
 var app = express();
-
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
-
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
-
-
 
 // //this is set as the start in the package.json file, but to run gridface homepage alone, 
 // //change the value in package.json to "start: npm .bin/www"
@@ -66,17 +57,16 @@ app.get("/regulations", function(req, res) {
     }
   });
 });
-// curl -v -H "Content-Type:application/json" -X POST http://localhost:3000/regulations -d '{"title":"Quarks & Co - zum Mitnehmen - GREAT PODCAST"}'
 
-//curl -v -H "Content-Type:application/json" -X POST http://localhost:3000/regulations -d '{"landmark":"curl tester 888"}' 
+//curl -H "Content-Type: application/json" -d '{"landmark":"Heroku Stream", "landmarkType": "stream", "county": "Dane"}' http://localhost:3000/regulations/
 
 app.post("/regulations", function(req, res) {
   var newRegulation = req.body;
 //   newRegulation.createDate = new Date();
 
-  // if (!(req.body.landmark)) {
-  //   handleError(res, "Invalid user input", "Must provide a landmark.", 400);
-  // }
+  if (!(req.body.landmark)) {
+    handleError(res, "Invalid user input", "Must provide a landmark.", 400);
+  }
 
   db.collection(REGULATIONS_COLLECTION).insertOne(newRegulation, function(err, doc) {
     if (err) {
