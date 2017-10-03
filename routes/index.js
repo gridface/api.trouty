@@ -94,7 +94,7 @@ router.get('/', function(req, res, next) {
       lm = req.params.landmark;
       console.log("parameter passed is " + lm);
       console.log(collection.collectionName)
-      collection.find({"landmark" : lm}).toArray(function(err, data){
+      collection.find({"landmark" : new RegExp(lm, "i")}).toArray(function(err, data){
         res.status(200).json(data);
       });
     }); 
