@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var mongodb = require("mongodb");
 var mongoose = require("mongoose");
-var ObjectID = mongodb.ObjectID;
+var ObjectId = require('mongodb').ObjectID;
+//var ObjectID = mongodb.ObjectID;
 
 
 var uristring =
@@ -89,12 +90,22 @@ router.get('/', function(req, res, next) {
     }); 
   });
 
-  router.get("/api/regulations/:landmark", function(req, res) {
+  router.get("/api/regulations/getbylandmark/:landmark", function(req, res) {
     mongoose.connection.db.collection(REGULATIONS_COLLECTION, function (err, collection) {
       lm = req.params.landmark;
       console.log("parameter passed is " + lm);
-      console.log(collection.collectionName)
       collection.find({"landmark" : new RegExp(lm, "i")}).toArray(function(err, data){
+        res.status(200).json(data);
+      });
+    }); 
+  });
+
+  router.get("/api/regulations/getbyid/:uId", function(req, res) {
+    mongoose.connection.db.collection(REGULATIONS_COLLECTION, function (err, collection) {
+      uId = ObjectId(req.params.uId);
+      console.log("ID parameter passed is " + uId);
+      //console.log("parameter passed is $$$$$$ " + collection.collectionName);
+      collection.find({"_id" : uId}).toArray(function(err, data){
         res.status(200).json(data);
       });
     }); 
