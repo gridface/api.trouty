@@ -1,27 +1,26 @@
 extends layout
 
 block content
-  // use "theme-invert" class on bright backgrounds, also try "text-shadows" class
-  body.theme-invert
-    nav.mainmenu
-      .container
-        .dropdown
-          button.navbar-toggle(type='button', data-toggle='dropdown')
-            span.icon-bar
-            |  
-            span.icon-bar
-            |  
-            span.icon-bar
-          // <a data-toggle="dropdown" href="#">Dropdown trigger</a>
-          ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
-            li
-              a.active(href='#head') Hello
-            li
-              a(href='#about') About me      
-            li
-              a(href='#themes') Services      
-            li
-              a(href='#contact') Get in touch
+  body
+    //- nav.mainmenu
+    //-   .container
+    //-     .dropdown
+    //-       button.navbar-toggle(type='button', data-toggle='dropdown')
+    //-         span.icon-bar
+    //-         |  
+    //-         span.icon-bar
+    //-         |  
+    //-         span.icon-bar
+    //-       // <a data-toggle="dropdown" href="#">Dropdown trigger</a>
+    //-       ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
+    //-         li
+    //-           a.active(href='#head') Hello
+    //-         li
+    //-           a(href='#about') About Me      
+    //-         li
+    //-           a(href='#themes') Services      
+    //-         li
+    //-           a(href='#contact') Get In Touch
     // Main (Home) section
     section#head.section
       .container
@@ -29,7 +28,7 @@ block content
           .col-md-10.col-lg-10.col-md-offset-1.col-lg-offset-1.text-center
             // Site Title, your name, HELLO msg, etc.
             h1.title Gridface Solutions
-            h2.subtitle Automation and Mobile Apps For Your Small Business
+            h2.subtitle Automation and Mobile Web
             // Short introductory (optional)
             h3.tagline
               |We bring the next generation of productivity and accessibility to
@@ -43,7 +42,7 @@ block content
     // Second (About) section
     section#about.section
       .container
-        h2.text-center.title About me
+        h2.text-center.sectionHeader About me
         .row
           .col-sm-4.col-sm-offset-2
             h5
@@ -73,7 +72,7 @@ block content
     // Third (Works) section
     section#themes.section
       .container
-        h2.text-center.title Our Services
+        h2.text-center.sectionHeader Our Services
         p.lead.text-center
           | We build a variety of custom solutions
           br
@@ -81,7 +80,7 @@ block content
 
     section#contact.section
       .container
-        h2.text-center.title Get in touch
+        h2.text-center.sectionHeader Get in touch
         .row
           .col-sm-8.col-sm-offset-2.text-center
             p Interested in an automation solution for your business?
@@ -108,6 +107,6 @@ block content
     // Load js libs only when the page is loaded.
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
-    script(src='js/modernizr.custom.72241.js')
+    //script(src='js/modernizr.custom.72241.js')
     // Custom template scripts
-    script(src='js/magister.js')
+    //script(src='js/magister.js')
