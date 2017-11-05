@@ -49,7 +49,8 @@ body {
 }
 @media (max-width: 479px) {
 	#head { 
-		   font-size:0.8em 
+			 font-size:0.8em ;
+			 padding-bottom:200px;
 	}
 }
 /* Show one of sections */
