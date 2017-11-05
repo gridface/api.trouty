@@ -1,5 +1,4 @@
 html {
-	/* background:#505D6E url(../images/body4.jpg) no-repeat center center fixed;  */
 	background:#505D6E url(../images/synthwaveCity1.jpg) no-repeat center center fixed; 
 	min-height:100%;
 	-webkit-background-size: cover;
@@ -14,92 +13,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	line-height: 1.5em;
-	font-size:14px;
-	/* font-family: Helvetica, Arial, sans-serif; */
+	/* font-size:14px; */
 	font-family: Helvetica, Arial, sans-serif;
 	color:#fff;
 	color:rgba(255,255,255,.8); 
 	font-weight: normal;
 }
 
-
-/********************************************************/
-/*                    Navigation bar                    */
-/********************************************************/
-.mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
-@media (min-width: 768px) {
-	.mainmenu { position: fixed; }
-}
-
-.navbar-toggle {
-	position:relative;
-	float:left;
-	display:block;
-	padding: 9px 10px;
-	background: rgba(255, 255, 255, 0.2);
-	background-image: none;
-	border: 0 none;
-	top:0px; 
-	-webkit-border-radius: 2px;
-	   -moz-border-radius: 2px;
-	        border-radius: 2px;
-	outline: 0;
-	opacity: 1;
-	-webkit-transition: all .45s;
-	   -moz-transition: all .45s;
-	        transition: all .45s;
-	        float: left;
-}
-.navbar-toggle .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-}
-.navbar-toggle .icon-bar + .icon-bar {
-	margin-top: 4px;
-}
-.open .navbar-toggle { 
-	top:-70px; 
-	opacity: 0;  
-}
-.mainmenu .dropdown-menu {
-	top: -14em;
-	left: 0px;
-	font-size: 13px;
-	padding:0;
-	background:none;
-	border:0 none;
-	border-radius: 2px;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	display:block;
-	opacity:0;
-	-webkit-transition: all .45s;
-	   -moz-transition: all .45s;
-	        transition: all .45s;
-}
-.mainmenu .dropdown-menu .active { 
-	font-weight:bold;
-}
-.mainmenu .open .dropdown-menu { 
-	top:2px;
-	opacity:1;
-}
-.mainmenu .dropdown-menu a { 
-	padding:10px 10px;
-	margin:0;
-	color:white;
-	text-decoration: none;
-	-webkit-border-radius: 2px;
-	   -moz-border-radius: 2px;
-	        border-radius: 2px;
-}
-.mainmenu .dropdown-menu a:hover { 
-	background:rgba(255,255,255,.1);
-	color:white;
-	padding:10px 8px 10px 12px;
-}
 
 
 
@@ -108,23 +28,34 @@ body {
 /********************************************************/
 .section { 
 	z-index: 1;
-	min-height:420px;
+	min-height:320px;
 	width: 100%; 
 	overflow:auto;
 	height:100%;
-	padding-top:100px;
-	padding-bottom:50px; 
+	padding-top:25px;
+	padding-bottom:25px; 
 	/* display:none; */
 	top:0;
+	
 } 
+.textblock{
+	background: rgba(98, 54, 165, 0.5);
+}
 @media (min-width: 768px) {
-	.section { padding-top:160px;}
+	.section  { 
+		padding-top:160px;
+		padding-bottom:160px;
+	}
 }
-
+@media (max-width: 479px) {
+	#head { 
+		   font-size:0.8em 
+	}
+}
 /* Show one of sections */
-#head { 
+/* #head { 
 	display: block;
-}
+} */
 
 
 /********************************************************/
@@ -137,6 +68,39 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	font-size:1.5em;
 	line-height:1.2em;
 } */
+
+/******************************************/
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 479px) {
+.title {
+	
+	font-size:4.5em;
+	
+	color:#fff;
+	font-family: Monoton;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+
+  .subtitle {
+	color: #FF9900;
+	font-family: Audiowide;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+
+  .sectionHeader {
+	color: #FF9900;
+	font-size:4.5em;
+	font-family: Audiowide;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+		
+  } 
+}
+/******************************************/
+
+
+/******************************************/
+/* Large Displays */
+@media only screen and (min-width: 480px) {
 
 .title {
 	font-weight:normal;
@@ -154,15 +118,20 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	-moz-animation: none;
 	animation: none;
   }
+ 
   .subtitle {
 	color: #FF9900;
 	font-family: Audiowide;
-  }
-  
-  .subtitle:hover {
 	-webkit-animation: neon5 1.5s ease-in-out infinite alternate;
 	-moz-animation: neon5 1.5s ease-in-out infinite alternate;
 	animation: neon5 1.5s ease-in-out infinite alternate;
+  }
+  .subtitle:hover {
+	color: #FF9900;
+	font-family: Audiowide;
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
   }
 
   .sectionHeader {
@@ -176,6 +145,8 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	-moz-animation: neon5 1.5s ease-in-out infinite alternate;
 	animation: neon5 1.5s ease-in-out infinite alternate;
   }
+}
+
 /* .subtitle { 
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-weight:normal;
@@ -205,99 +176,14 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 }
 
 
-/*Neon*/
-p {
-	text-align: center;
-	font-size: 7em;
-	margin: 20px 0 20px 0;
-  }
-  
-  a {
-	text-decoration: none;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-  }
-  
-  p:nth-child(1) a {
-	color: #fff;
-	font-family: Monoton;
-	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
-	animation: neon1 1.5s ease-in-out infinite alternate;
-  }
-  
-  p:nth-child(1) a:hover {
-	color: #FF1177;
-	-webkit-animation: none;
-	-moz-animation: none;
-	animation: none;
-  }
-  
-  p:nth-child(2) a {
-	font-size: 1.5em;
-	color: #228DFF;
-	font-family: Iceland;
-  }
-  
-  p:nth-child(2) a:hover {
-	-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon2 1.5s ease-in-out infinite alternate;
-	animation: neon2 1.5s ease-in-out infinite alternate;
-  }
-  
-  p:nth-child(3) a {
-	color: #FFDD1B;
-	font-family: Pacifico;
-  }
-  
-  p:nth-child(3) a:hover {
-	-webkit-animation: neon3 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon3 1.5s ease-in-out infinite alternate;
-	animation: neon3 1.5s ease-in-out infinite alternate;
-  }
-  
-  p:nth-child(4) a {
-	color: #B6FF00;
-	font-family: PressStart;
-	font-size: 0.8em;
-  }
-  
-  p:nth-child(4) a:hover {
-	-webkit-animation: neon4 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon4 1.5s ease-in-out infinite alternate;
-	animation: neon4 1.5s ease-in-out infinite alternate;
-  }
-  
-  p:nth-child(5) a {
-	color: #FF9900;
-	font-family: Audiowide;
-  }
-  
-  p:nth-child(5) a:hover {
-	-webkit-animation: neon5 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon5 1.5s ease-in-out infinite alternate;
-	animation: neon5 1.5s ease-in-out infinite alternate;
-  }
-  
-  p:nth-child(6) a {
-	color: #BA01FF;
-	font-family: Vampiro One;
-  }
-  
-  p:nth-child(6) a:hover {
-	-webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-	-moz-animation: neon6 1.5s ease-in-out infinite alternate;
-	animation: neon6 1.5s ease-in-out infinite alternate;
-  }
-  
-  p a:hover {
-	color: #ffffff;
-  }
+
 
 /********************************************************/
 /*                   UI - Buttons                       */
 /********************************************************/
+
+/* Large Displays */
+
 .btn{
 	color:#333;
 	text-shadow: none;
@@ -334,6 +220,35 @@ p {
 	background: rgba(255,255,255,.5);
 }
 
+@media only screen and (min-width: 480px) {
+	.floating-btn {
+		font-family: "Vampiro One";
+		color: #B6FF00;
+		/* background: #6236A5; */
+		background: rgba(98, 54, 165, 0.8);
+		padding: 30px;
+		width: 200px;
+		z-index: 100;
+		position: fixed;
+		bottom: 300px;
+		right: 0px;
+		font-size: 1.5em;
+	  }
+	
+	  
+	  .floating-btn:hover {
+		color: #B6FF00;
+		-webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+		-moz-animation: neon4 1.5s ease-in-out infinite alternate;
+		animation: neon4 1.5s ease-in-out infinite alternate;
+	  }
+	}
+
+	@media only screen and (max-width: 480px) {
+		.floating-btn {
+			display: none;
+		  }
+		}
 
 
 /********************************************************/
@@ -561,6 +476,96 @@ p {
 	}
 }
 
+/*Neon*/
+/* p {
+	text-align: center;
+	font-size: 7em;
+	margin: 20px 0 20px 0;
+  }
+  
+  a {
+	text-decoration: none;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  }
+  
+  p:nth-child(1) a {
+	color: #fff;
+	font-family: Monoton;
+	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
+	animation: neon1 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(1) a:hover {
+	color: #FF1177;
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+  }
+  
+  p:nth-child(2) a {
+	font-size: 1.5em;
+	color: #228DFF;
+	font-family: Iceland;
+  }
+  
+  p:nth-child(2) a:hover {
+	-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon2 1.5s ease-in-out infinite alternate;
+	animation: neon2 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(3) a {
+	color: #FFDD1B;
+	font-family: Pacifico;
+  }
+  
+  p:nth-child(3) a:hover {
+	-webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon3 1.5s ease-in-out infinite alternate;
+	animation: neon3 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(4) a {
+	color: #B6FF00;
+	font-family: PressStart;
+	font-size: 0.8em;
+  }
+  
+  p:nth-child(4) a:hover {
+	-webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon4 1.5s ease-in-out infinite alternate;
+	animation: neon4 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(5) a {
+	color: #FF9900;
+	font-family: Audiowide;
+  }
+  
+  p:nth-child(5) a:hover {
+	-webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon5 1.5s ease-in-out infinite alternate;
+	animation: neon5 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(6) a {
+	color: #BA01FF;
+	font-family: Vampiro One;
+  }
+  
+  p:nth-child(6) a:hover {
+	-webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon6 1.5s ease-in-out infinite alternate;
+	animation: neon6 1.5s ease-in-out infinite alternate;
+  }
+  
+  p a:hover {
+	color: #ffffff;
+  } */
+
 
 /***********************************************************/
 /*                   Theme: text shadows                   */
@@ -650,4 +655,84 @@ p {
 }
 .thumbnail .caption {
 	color: inherit;
+} */
+
+
+
+/********************************************************/
+/*                    Navigation bar                    */
+/********************************************************/
+/* .mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
+@media (min-width: 768px) {
+	.mainmenu { position: fixed; }
+}
+
+.navbar-toggle {
+	position:relative;
+	float:left;
+	display:block;
+	padding: 9px 10px;
+	background: rgba(255, 255, 255, 0.2);
+	background-image: none;
+	border: 0 none;
+	top:0px; 
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+	outline: 0;
+	opacity: 1;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+	        float: left;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+.open .navbar-toggle { 
+	top:-70px; 
+	opacity: 0;  
+}
+.mainmenu .dropdown-menu {
+	top: -14em;
+	left: 0px;
+	font-size: 13px;
+	padding:0;
+	background:none;
+	border:0 none;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display:block;
+	opacity:0;
+	-webkit-transition: all .45s;
+	   -moz-transition: all .45s;
+	        transition: all .45s;
+}
+.mainmenu .dropdown-menu .active { 
+	font-weight:bold;
+}
+.mainmenu .open .dropdown-menu { 
+	top:2px;
+	opacity:1;
+}
+.mainmenu .dropdown-menu a { 
+	padding:10px 10px;
+	margin:0;
+	color:white;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.mainmenu .dropdown-menu a:hover { 
+	background:rgba(255,255,255,.1);
+	color:white;
+	padding:10px 8px 10px 12px;
 } */
