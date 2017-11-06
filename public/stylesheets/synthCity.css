@@ -78,20 +78,20 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	font-size:4.5em;
 	
 	color:#fff;
-	font-family: Monoton;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
   }
 
   .subtitle {
 	color: #FF9900;
-	font-family: Audiowide;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;;
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
   }
 
   .sectionHeader {
 	color: #FF9900;
 	font-size:4.5em;
-	font-family: Audiowide;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;;
 	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
 		
   } 
