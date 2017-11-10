@@ -14,13 +14,13 @@ for use with future clients
 ------------------------------------------------
 1. The site must be performant and load quickly on mobile devices
     * TODO:
-        + add mobile friendly fonts
-        + 
+        + add mobile friendly fonts - done
+        + fix links to look like buttons
 2. The site must render beautifully on phone, tablet, and desktop
     * Dev notes: completed initial redesign - making finishing touches
     * TODO:
-        + fix navbar
-        +
+        + fix navbar - done
+        + fix navigation to include slider for mobile
 3. The site must seamlessly integrate at least 3 design animations for display to prospective clients
     * TODO:
         + re-integrate magister
@@ -32,10 +32,14 @@ for use with future clients
         + Nodemailer integration server setup
         + Add API to capture messages
         + Add UX component in website for capturing addresses and messages
+        + Create web table viewer for messages
 5. The site must have a secured area for viewing messages utilizing oauth2 authentication via google
     * Not Started
     * TODO:
-        + Create web table viewer for messages
+        + add local security signup via node and mongo
+        + add passport authentication for social media
+        + create demo area for prospective clients
+        
     * BONUS:
         + Create test area for display to clients
 
