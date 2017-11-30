@@ -8,6 +8,7 @@ var dbConfig = require('../bin/database.js');
 //var regulationsApi = require('./routes/regulations');
 var messagesApi = require('./messageRoutes');
 var regulationsApi = require('./regulationRoutes');
+var estimatorAutomation = require('./estimatorRoutes');
 
 
 var uristring =
@@ -53,8 +54,11 @@ router.get('/', (req, res, next) => {
 // Messages API
 router.use('/api/messages', messagesApi);
 
-// Messages API
+// Regulations API
 router.use('/api/regulations', regulationsApi);
+
+// DhpEstimator Automation
+router.use('/automation/estimator', estimatorAutomation);
 
 
 /**

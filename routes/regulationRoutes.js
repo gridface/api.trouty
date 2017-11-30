@@ -5,33 +5,12 @@ var mongoCollections = require('../models/collections')
 var regSchema = require('../models/regulationSchema')
 
 //mongodb collection
-//var REGULATIONS_COLLECTION = "regulation";
 REGULATIONS_COLLECTION = mongoCollections.REGULATIONS_COLLECTION;
-
-
 //mongoose schema
-// var fishingRegulationSchema = new mongoose.Schema({
-    
-//       landmark: String,
-//       coord: String,
-//       county: String,
-//       state: {type: String, default: 'WI' },
-//       zipcode: String,
-//       landmark_type: String,
-//       regulation_type: String,
-//       bag_limit: String,
-//       min_size: String,
-//       release_only: Boolean,
-//       other_restrictions: {type: String, trim: true },
-//       open_season_start: String,
-//       open_season_end: String,
-//       regulation_year: String
-    
-//   });
-  var fishingRegulationSchema = regSchema
-  
-  var FishingReg = mongoose.model(REGULATIONS_COLLECTION, fishingRegulationSchema);
-  
+var fishingRegulationSchema = regSchema
+//mongoose model  
+var FishingReg = mongoose.model(REGULATIONS_COLLECTION, fishingRegulationSchema);
+
 
   router.get("/", function(req, res) {
     mongoose.connection.db.collection(REGULATIONS_COLLECTION, function (err, collection) {
@@ -40,6 +19,7 @@ REGULATIONS_COLLECTION = mongoCollections.REGULATIONS_COLLECTION;
       });
     }); 
   });
+  
 
   router.get("/getbylandmark/:landmark", function(req, res) {
     mongoose.connection.db.collection(REGULATIONS_COLLECTION, function (err, collection) {
@@ -71,9 +51,5 @@ REGULATIONS_COLLECTION = mongoCollections.REGULATIONS_COLLECTION;
       });
     }); 
   });
-
-
-
-
 
 module.exports = router;

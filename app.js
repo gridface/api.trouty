@@ -4,11 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
-
 var app = express();
+var webdriver = require('selenium-webdriver');
 
+//CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -16,27 +16,27 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/', function(req, res, next) {
-  // Handle the get for this route
+  // Handle the CORS get for api
 });
 
-// app.get('/api/regulations/getbylandmark', function(req, res, next) {
-//   // Handle the get for this route
-// });
-
-// app.get('/api/regulations/getbyid', function(req, res, next) {
-//   // Handle the get for this route
-// });
-
 app.post('/api/', function(req, res, next) {
- // Handle the post for this route
+ // Handle the CORS post for api
+});
+
+app.get('/automation/', function(req, res, next) {
+  // Handle the CORS get for automation
+});
+
+app.post('/automation/', function(req, res, next) {
+ // Handle the CORS post for automation
 });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+app.use(favicon(path.join(__dirname, 'public/images', 'gFavicon.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
